@@ -1,3 +1,7 @@
-<view>
-  {{redpackList[0].prizeName}}
+<view class="page">
+  <view class="info" wx:if="{{userInfo}}">
+    <image class="head" src="{{userInfo.avatarUrl}}"></image>
+    <text>{{userInfo.nickName}}</text>
+  </view>
+  <button class="getInfo" open-type="getUserInfo" bindgetuserinfo="getUserInfo">获取用户信息</button>
 </view>

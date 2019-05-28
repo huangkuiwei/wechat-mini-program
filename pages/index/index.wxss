@@ -1,0 +1,16 @@
+button.getInfo {
+  width: 300rpx;
+  font-size: .8rem;
+  margin: 10px auto;
+}
+view.info > .head {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+view.info > text {
+  display: block;
+  text-align: center;
+}

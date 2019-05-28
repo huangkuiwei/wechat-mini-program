@@ -21,8 +21,11 @@ function request(method, url, data, options) {
           reject(handleError(res.data))
         }
       },
-      fail: res => {
-        reject(handleError(res.data))
+      fail: () => {
+        reject(handleError({
+          code: -1,
+          message: '接口请求失败'
+        }))
       },
       complete: () => {
         wx.hideLoading()

@@ -2,17 +2,23 @@ let request = require('../../util/request.js');
 
 Page({
   data: {
-    redPackList: []
+    userInfo: null
   },
   onLoad() {
-    request.post('higo/redpackList', {
-      activityCode: '517higo'
-    }, {
-      lock: true
-    }).then(data => {
-      this.setData({
-        redPackList: data
-      })
+    wx.getStorage({
+      key: 'userInfo',
+      success: res => {
+        console.log(res)
+        this.setData({
+          userInfo: res.data
+        })
+      }
     })
+  },
+  getUserInfo(data) {
+    this.setData({
+      userInfo: data.detail.userInfo
+    });
+    console.log(this.data.userInfo)
   }
 });
