@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#fff000",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "小程序",
+    "backgroundColor": "#ff0000",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": true
+  },
+  "networkTimeout": {
+    "request": 30000
+  }
+}

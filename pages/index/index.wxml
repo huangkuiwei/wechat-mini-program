@@ -1,0 +1,3 @@
+<view>
+  {{redpackList[0].prizeName}}
+</view>
