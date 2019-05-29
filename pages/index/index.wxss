@@ -1,4 +1,4 @@
-button.getInfo {
+button {
   width: 300rpx;
   font-size: .8rem;
   margin: 10px auto;
@@ -13,4 +13,9 @@ view.info > .head {
 view.info > text {
   display: block;
   text-align: center;
+}
+camera {
+  height: 300rpx;
+  width: 500rpx;
+  margin: 0 auto;
 }

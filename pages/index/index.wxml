@@ -3,5 +3,11 @@
     <image class="head" src="{{userInfo.avatarUrl}}"></image>
     <text>{{userInfo.nickName}}</text>
   </view>
-  <button class="getInfo" open-type="getUserInfo" bindgetuserinfo="getUserInfo">获取用户信息</button>
+  <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo">获取用户信息</button>
+  <camera frame-size="medium" device-position="back" flash="off"></camera>
+  <button class="photo" bindtap="getPhoto">拍照</button>
+  <view>
+    <text>照片预览：</text>
+    <image wx:if="{{photo}}" src="{{photo}}"></image>
+  </view>
 </view>
