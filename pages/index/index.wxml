@@ -11,5 +11,17 @@
         <text>{{item.text}}</text>
       </view>
     </view>
+    <view class="btn-bg">
+      <image mode="widthFix" src="/assets/images/btn-bg.png"></image>
+      <text class="open">开启礼盒</text>
+    </view>
+  </view>
+  <view class="prize-type">
+    <view class="tip">心愿盒子大揭秘</view>
+    <view class="type">
+      <text>重磅好礼包邮送</text>
+      <text>超值业务五折办</text>
+      <text>特惠福利享不停</text>
+    </view>
   </view>
 </view>
