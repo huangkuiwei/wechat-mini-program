@@ -1,14 +1,5 @@
 App({
   onLaunch() {
-    
-  },
-  onShow() {
-
-  },
-  onHide() {
-    console.log('app is hide')
-  },
-  globalData: {
-    message: 'Hello World'
+    console.log('微信小程序启动了')
   }
-});
+})

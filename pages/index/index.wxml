@@ -1,13 +1,15 @@
-<view class="page">
-  <view class="info" wx:if="{{userInfo}}">
-    <image class="head" src="{{userInfo.avatarUrl}}"></image>
-    <text>{{userInfo.nickName}}</text>
-  </view>
-  <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo">获取用户信息</button>
-  <camera frame-size="medium" device-position="back" flash="off"></camera>
-  <button class="photo" bindtap="getPhoto">拍照</button>
-  <view>
-    <text>照片预览：</text>
-    <image wx:if="{{photo}}" src="{{photo}}"></image>
+<view class="index">
+  <image class="top-bg" mode="widthFix" src="/assets/images/top-bg.png"></image>
+  <image class="telecom" mode="widthFix" src="/assets/images/telecom.png"></image>
+  <text class="rule">投诉 | 活动规则</text>
+  <view class="draw">
+    <image class="box-bg" mode="widthFix" src="/assets/images/box-bg.png"></image>
+    <text class="tip">看看盒子里都有啥</text>
+    <view class="prize">
+      <view wx:for="{{prizeList}}" wx:key="item.id">
+        <image bindtap="getPrize" data-id="{{item.id}}" mode="widthFix" src="{{item.image}}"></image>
+        <text>{{item.text}}</text>
+      </view>
+    </view>
   </view>
 </view>

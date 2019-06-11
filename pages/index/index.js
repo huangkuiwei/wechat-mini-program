@@ -1,41 +1,69 @@
-let request = require('../../util/request.js');
-
 Page({
   data: {
-    userInfo: null,
-    photo: null
+    message: 'Hello',
+    prizeList: [{
+        id: 0,
+        image: '/assets/images/prize-bg01.png',
+        text: '大气'
+      },
+      {
+        id: 1,
+        image: '/assets/images/prize-bg01.png',
+        text: '硬扎'
+      },
+      {
+        id: 2,
+        image: '/assets/images/prize-bg01.png',
+        text: '灵泛'
+      },
+      {
+        id: 3,
+        image: '/assets/images/prize-bg01.png',
+        text: '才华横溢'
+      },
+      {
+        id: 4,
+        image: '/assets/images/prize-bg01.png',
+        text: '里手'
+      },
+      {
+        id: 5,
+        image: '/assets/images/prize-bg01.png',
+        text: '我很特别'
+      },
+      {
+        id: 6,
+        image: '/assets/images/prize-bg01.png',
+        text: '勇敢'
+      },
+      {
+        id: 7,
+        image: '/assets/images/prize-bg01.png',
+        text: '俊朗'
+      },
+      {
+        id: 8,
+        image: '/assets/images/prize-bg01.png',
+        text: '可爱'
+      }
+    ]
   },
   onLoad() {
-    // 检测个人信息是否授权
-    wx.getSetting({
-      success: data => {
-        if (data.authSetting['scope.userInfo']) {
-          wx.getUserInfo({
-            success: data => {
-              this.setData({
-                userInfo: data.userInfo
-              })
-            }
-          })
-        }
-      }
-    })
+    console.log('index页面加载了')
   },
-  getUserInfo(data) {
-    this.setData({
-      userInfo: data.detail.userInfo
-    })
-  },
-  getPhoto() {
-    const context = wx.createCameraContext();
-    // 拍照
-    context.takePhoto({
-      quality: 'high',
-      success: data => {
+  getPrize(e) {
+    let id = e.target.dataset.id;
+    this.data.prizeList.map(item => {
+      let currentImage = `prizeList[${item.id}].image`;
+      if (item.id === id) {
         this.setData({
-          photo: data.tempImagePath
+          [currentImage]: '/assets/images/prize-bg02.png'
+        })
+      } else {
+        this.setData({
+          [currentImage]: '/assets/images/prize-bg01.png'
         })
       }
     })
   }
-});
+})

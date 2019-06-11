@@ -4,14 +4,12 @@
     "pages/logs/logs"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#fff000",
+    "navigationBarBackgroundColor": "#ffff00",
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "小程序",
     "backgroundColor": "#ff0000",
     "backgroundTextStyle": "light",
     "enablePullDownRefresh": true
   },
-  "networkTimeout": {
-    "request": 20000
-  }
+  "sitemapLocation": "sitemap.json"
 }
