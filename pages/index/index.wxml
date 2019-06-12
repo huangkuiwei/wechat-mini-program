@@ -4,11 +4,11 @@
   <text class="rule">投诉 | 活动规则</text>
   <view class="draw">
     <image class="box-bg" mode="widthFix" src="/assets/images/box-bg.png"></image>
-    <text class="tip">看看盒子里都有啥</text>
+    <text class="tip" bindtap="scrollToTip">看看盒子里都有啥</text>
     <view class="prize">
       <view wx:for="{{prizeList}}" wx:key="item.id">
         <image bindtap="getPrize" data-id="{{item.id}}" mode="widthFix" src="{{item.image}}"></image>
-        <text>{{item.text}}</text>
+        <text class="{{item.image === '/assets/images/prize-bg02.png' ? 'active' : ''}}">{{item.text}}</text>
       </view>
     </view>
     <view class="btn-bg">
@@ -17,11 +17,23 @@
     </view>
   </view>
   <view class="prize-type">
-    <view class="tip">心愿盒子大揭秘</view>
+    <view class="tip" id="tip">心愿盒子大揭秘</view>
     <view class="type">
-      <text>重磅好礼包邮送</text>
-      <text>超值业务五折办</text>
-      <text>特惠福利享不停</text>
+      <text data-menu="{{1}}" class="{{menu === 1 ? 'active' : ''}}" bindtap="changeItem">重磅好礼包邮送</text>
+      <text data-menu="{{2}}" class="{{menu === 2 ? 'active' : ''}}" bindtap="changeItem">超值业务五折办</text>
+      <text data-menu="{{3}}" class="{{menu === 3 ? 'active' : ''}}" bindtap="changeItem">特惠福利享不停</text>
+    </view>
+    <view class="items" wx:if="{{menu === 1}}">
+      <image src="/assets/images/left-prize01.png" mode="widthFix"></image>
+      <image src="/assets/images/left-prize02.png" mode="widthFix"></image>
+      <image src="/assets/images/left-prize03.png" mode="widthFix"></image>
+      <image src="/assets/images/left-prize04.png" mode="widthFix"></image>
+    </view>
+    <view class="items" wx:if="{{menu === 2}}">
+      <image src="/assets/images/middle-prize.png" mode="widthFix"></image>
+    </view>
+    <view class="items" wx:if="{{menu === 3}}">
+      <image src="/assets/images/right-prize.png" mode="widthFix"></image>
     </view>
   </view>
 </view>

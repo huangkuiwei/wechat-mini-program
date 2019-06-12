@@ -1,1 +1,3 @@
-/* pages/logs/logs.wxss */
+view view {
+  color: #f00;
+}

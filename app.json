@@ -11,5 +11,17 @@
     "backgroundTextStyle": "light",
     "enablePullDownRefresh": true
   },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "index"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "logs"
+      }
+    ]
+  },
   "sitemapLocation": "sitemap.json"
 }

@@ -1,2 +1,4 @@
-<!--pages/logs/logs.wxml-->
-<text>pages/logs/logs.wxml</text>
+<view>
+  <view>Hello World</view>
+  <text>Hello World</text>
+</view>

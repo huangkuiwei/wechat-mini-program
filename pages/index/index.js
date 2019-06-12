@@ -46,10 +46,11 @@ Page({
         image: '/assets/images/prize-bg01.png',
         text: '可爱'
       }
-    ]
+    ],
+    menu: 1
   },
   onLoad() {
-    console.log('index页面加载了')
+    console.log(this)
   },
   getPrize(e) {
     let id = e.target.dataset.id;
@@ -65,5 +66,18 @@ Page({
         })
       }
     })
+  },
+  changeItem(e) {
+    let menu = e.target.dataset.menu;
+    this.setData({
+      menu
+    })
+  },
+  scrollToTip() {
+    wx.createSelectorQuery().select('#tip').boundingClientRect(rect => {
+      wx.pageScrollTo({
+        scrollTop: rect.top
+      })
+    }).exec()
   }
 })
