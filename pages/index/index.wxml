@@ -1,19 +1,19 @@
 <view class="index">
-  <image class="top-bg" mode="widthFix" src="/assets/images/top-bg.png"></image>
-  <image class="telecom" mode="widthFix" src="/assets/images/telecom.png"></image>
+  <image class="top-bg" mode="widthFix" src="{{baseURL}}/top-bg.png"></image>
+  <image class="telecom" mode="widthFix" src="{{baseURL}}/telecom.png"></image>
   <text class="rule">投诉 | 活动规则</text>
   <view class="draw">
-    <image class="box-bg" mode="widthFix" src="/assets/images/box-bg.png"></image>
+    <image class="box-bg" mode="widthFix" src="{{baseURL}}/box-bg.png"></image>
     <text class="tip" bindtap="scrollToTip">看看盒子里都有啥</text>
     <view class="prize">
       <view wx:for="{{prizeList}}" wx:key="item.id">
         <image bindtap="getPrize" data-id="{{item.id}}" mode="widthFix" src="{{item.image}}"></image>
-        <text class="{{item.image === '/assets/images/prize-bg02.png' ? 'active' : ''}}">{{item.text}}</text>
+        <text class="{{item.image === (baseURL + '/prize-bg02.png') ? 'active' : ''}}">{{item.text}}</text>
       </view>
     </view>
     <view class="btn-bg">
-      <image mode="widthFix" src="/assets/images/btn-bg.png"></image>
-      <text class="open">开启礼盒</text>
+      <image mode="widthFix" src="{{baseURL}}/btn-bg.png"></image>
+      <text class="open" bindtap="openPrize">开启礼盒</text>
     </view>
   </view>
   <view class="prize-type">
@@ -24,16 +24,33 @@
       <text data-menu="{{3}}" class="{{menu === 3 ? 'active' : ''}}" bindtap="changeItem">特惠福利享不停</text>
     </view>
     <view class="items" wx:if="{{menu === 1}}">
-      <image src="/assets/images/left-prize01.png" mode="widthFix"></image>
-      <image src="/assets/images/left-prize02.png" mode="widthFix"></image>
-      <image src="/assets/images/left-prize03.png" mode="widthFix"></image>
-      <image src="/assets/images/left-prize04.png" mode="widthFix"></image>
+      <image src="{{baseURL}}/left-prize01.png" mode="widthFix"></image>
+      <image src="{{baseURL}}/left-prize02.png" mode="widthFix"></image>
+      <image src="{{baseURL}}/left-prize03.png" mode="widthFix"></image>
+      <image src="{{baseURL}}/left-prize04.png" mode="widthFix"></image>
     </view>
     <view class="items" wx:if="{{menu === 2}}">
-      <image src="/assets/images/middle-prize.png" mode="widthFix"></image>
+      <image src="{{baseURL}}/middle-prize.png" mode="widthFix"></image>
     </view>
     <view class="items" wx:if="{{menu === 3}}">
-      <image src="/assets/images/right-prize.png" mode="widthFix"></image>
+      <image src="{{baseURL}}/right-prize.png" mode="widthFix"></image>
     </view>
   </view>
+  <swiper indicator-dots autoplay interval="{{3000}}" circular>
+    <swiper-item>
+      <image mode="widthFix" src="{{baseURL}}/ad1.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image mode="widthFix" src="{{baseURL}}/ad2.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image mode="widthFix" src="{{baseURL}}/ad3.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image mode="widthFix" src="{{baseURL}}/ad4.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image mode="widthFix" src="{{baseURL}}/ad5.jpg"></image>
+    </swiper-item>
+  </swiper>
 </view>

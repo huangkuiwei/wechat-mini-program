@@ -1,53 +1,56 @@
+let baseURL = getApp().globalData.baseURL;
+
 Page({
   data: {
     message: 'Hello',
     prizeList: [{
         id: 0,
-        image: '/assets/images/prize-bg01.png',
+        image: `${baseURL}/prize-bg01.png`,
         text: '大气'
       },
       {
         id: 1,
-        image: '/assets/images/prize-bg01.png',
+        image: `${baseURL}/prize-bg01.png`,
         text: '硬扎'
       },
       {
         id: 2,
-        image: '/assets/images/prize-bg01.png',
+        image: `${baseURL}/prize-bg01.png`,
         text: '灵泛'
       },
       {
         id: 3,
-        image: '/assets/images/prize-bg01.png',
+        image: `${baseURL}/prize-bg01.png`,
         text: '才华横溢'
       },
       {
         id: 4,
-        image: '/assets/images/prize-bg01.png',
+        image: `${baseURL}/prize-bg01.png`,
         text: '里手'
       },
       {
         id: 5,
-        image: '/assets/images/prize-bg01.png',
+        image: `${baseURL}/prize-bg01.png`,
         text: '我很特别'
       },
       {
         id: 6,
-        image: '/assets/images/prize-bg01.png',
+        image: `${baseURL}/prize-bg01.png`,
         text: '勇敢'
       },
       {
         id: 7,
-        image: '/assets/images/prize-bg01.png',
+        image: `${baseURL}/prize-bg01.png`,
         text: '俊朗'
       },
       {
         id: 8,
-        image: '/assets/images/prize-bg01.png',
+        image: `${baseURL}/prize-bg01.png`,
         text: '可爱'
       }
     ],
-    menu: 1
+    menu: 1,
+    baseURL: 'http://192.168.43.35:3000/public/images'
   },
   onLoad() {
     console.log(this)
@@ -58,11 +61,11 @@ Page({
       let currentImage = `prizeList[${item.id}].image`;
       if (item.id === id) {
         this.setData({
-          [currentImage]: '/assets/images/prize-bg02.png'
+          [currentImage]: `${baseURL}/prize-bg02.png`
         })
       } else {
         this.setData({
-          [currentImage]: '/assets/images/prize-bg01.png'
+          [currentImage]: `${baseURL}/prize-bg01.png`
         })
       }
     })
@@ -79,5 +82,28 @@ Page({
         scrollTop: rect.top
       })
     }).exec()
+  },
+  openPrize() {
+    let isSelect = this.data.prizeList.some(item => {
+      return item.image === `${baseURL}/prize-bg02.png`
+    });
+    if (!isSelect) {
+      wx.showToast({
+        title: '请先选择礼品哦~',
+        icon: 'none'
+      })
+    } else {
+      wx.showLoading({
+        title: '抽奖中...',
+        success: () => {
+          setTimeout(() => {
+            wx.hideLoading();
+            wx.showToast({
+              title: '抽奖完成~',
+            })
+          }, 2000)
+        }
+      })
+    }
   }
-})
+});
