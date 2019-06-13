@@ -5,10 +5,10 @@ Page({
   data: {
     message: 'Hello',
     prizeList: [{
-      id: 0,
-      image: `${baseURL}/prize-bg01.png`,
-      text: '大气'
-    },
+        id: 0,
+        image: `${baseURL}/prize-bg01.png`,
+        text: '大气'
+      },
       {
         id: 1,
         image: `${baseURL}/prize-bg01.png`,
@@ -51,8 +51,9 @@ Page({
       }
     ],
     menu: 1,
-    baseURL: 'http://192.168.2.102:3000/public/images',
-    recodeList: []
+    baseURL: 'http://192.168.43.35:3000/public/images',
+    recodeList: [],
+    ruleDialog: false
   },
   onLoad() {
     request.post('post/winningRecord/queryAllWinningRecordList', {}, {
@@ -111,6 +112,18 @@ Page({
             })
           }, 2000)
         }
+      })
+    }
+  },
+  showRuleDialog() {
+    this.setData({
+      ruleDialog: true
+    })
+  },
+  close(e) {
+    if (e.target.dataset.layer) {
+      this.setData({
+        ruleDialog: false
       })
     }
   }

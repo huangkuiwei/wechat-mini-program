@@ -1,7 +1,10 @@
 <view class="index">
   <image class="top-bg" mode="widthFix" src="{{baseURL}}/top-bg.png"></image>
   <image class="telecom" mode="widthFix" src="{{baseURL}}/telecom.png"></image>
-  <text class="rule">投诉 | 活动规则</text>
+  <view class="rule">
+    <text>投诉</text> |
+    <text bindtap="showRuleDialog">活动规则</text>
+  </view>
   <view class="draw">
     <image class="box-bg" mode="widthFix" src="{{baseURL}}/box-bg.png"></image>
     <swiper autoplay interval="{{3000}}" circular vertical wx:if="{{recodeList.length > 0}}" class="drwan-pirze">
@@ -58,4 +61,25 @@
       <image mode="widthFix" src="{{baseURL}}/ad5.jpg"></image>
     </swiper-item>
   </swiper>
+</view>
+
+<!-- 活动规则 dialog -->
+<view data-layer wx:if="{{ruleDialog}}" class="layer" bindtap="close">
+  <view class="dialog">
+    <view class="header">
+      <view>活动规则</view>
+    </view>
+    <scroll-view scroll-y class="body">
+      <view>1. 活动时间：2018年12月7日-12月15日</view>
+      <view>2. 活动对象：湖南电信用户</view>
+      <view>3. 用户初次参与活动有1次抽现金红包机会，每成功邀请1位好友首次关注“中国电信湖南客服”即可获得1次抽取现金红包机会。</view>
+      <view>4. 现金红包金额可累加，达到1元即可提现到微信账户中，如未关注绑定“中国电信湖南客服”红包将无法提现。</view>
+      <view>5. 因腾讯原因导致红包被拦截，或因用户24小时未领取红包导致逾期退回等情况，中国电信湖南客服不予补发。</view>
+      <view>6. 每天红包提现总金额为10000元，提现时间为每天12：00至18：00,本活动旨在回馈新老用户，严禁一切恶意刷奖行为，一经查实，活动账户将被冻结清零。</view>
+      <view>7. 本活动最终解释权归中国电信湖南客服所有。</view>
+    </scroll-view>
+    <view class="footer">
+
+    </view>
+  </view>
 </view>
