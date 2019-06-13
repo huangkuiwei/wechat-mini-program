@@ -4,6 +4,6 @@ App({
   },
   globalData: {
     // 本地 ip 地址
-    baseURL: 'http://192.168.43.35:3000/public/images'
+    baseURL: 'http://192.168.2.102:3000/public/images'
   }
 });

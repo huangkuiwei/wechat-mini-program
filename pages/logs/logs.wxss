@@ -1,3 +1,3 @@
-view view {
-  color: #f00;
+text:nth-child(1) {
+  color: #ff7a24;
 }

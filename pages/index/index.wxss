@@ -26,12 +26,12 @@ page {
   position: relative;
 }
 
-.draw > .box-bg {
+.draw>.box-bg {
   width: 100%;
   display: block;
 }
 
-.draw > .tip {
+.draw>.tip {
   position: absolute;
   left: -25rpx;
   top: 110rpx;
@@ -39,11 +39,11 @@ page {
   color: #ff7a24;
   font-weight: bold;
   width: 25rpx;
-  background: url("http://192.168.43.35:3000/public/images/look-bg.png") top/100% 100% no-repeat;
+  background: url("http://192.168.2.102:3000/public/images/look-bg.png") top/100% 100% no-repeat;
   padding: 20rpx;
 }
 
-.draw > .prize {
+.draw>.prize {
   position: absolute;
   top: 12%;
   width: 90%;
@@ -54,18 +54,18 @@ page {
   flex-wrap: wrap;
 }
 
-.draw > .prize > view {
+.draw>.prize>view {
   width: 33.3%;
   text-align: center;
   margin-bottom: 4%;
   position: relative;
 }
 
-.draw > .prize > view > image {
+.draw>.prize>view>image {
   width: 60%;
 }
 
-.draw > .prize > view > text {
+.draw>.prize>view>text {
   position: absolute;
   left: 50rpx;
   bottom: 15rpx;
@@ -73,11 +73,11 @@ page {
   font-size: 23rpx;
 }
 
-.draw > .prize > view > .active {
+.draw>.prize>view>.active {
   color: #fff;
 }
 
-.draw > .btn-bg {
+.draw>.btn-bg {
   position: absolute;
   width: 100%;
   left: 0;
@@ -87,11 +87,11 @@ page {
   text-align: center;
 }
 
-.draw > .btn-bg > image {
+.draw>.btn-bg>image {
   width: 50%;
 }
 
-.draw > .btn-bg > .open {
+.draw>.btn-bg>.open {
   position: absolute;
   left: 0;
   right: 0;
@@ -105,41 +105,41 @@ page {
 
 .prize-type {
   margin: 0 8%;
-  background: url("http://192.168.43.35:3000/public/images/type-bg.png") top/100% 100% no-repeat;
+  background: url("http://192.168.2.102:3000/public/images/type-bg.png") top/100% 100% no-repeat;
 }
 
 .prize-type {
   padding: 40rpx;
 }
 
-.prize-type > .tip {
+.prize-type>.tip {
   text-align: center;
   color: #fff;
   font-weight: bold;
   margin-bottom: 40rpx;
 }
 
-.prize-type > .type {
+.prize-type>.type {
   display: flex;
   justify-content: space-around;
   font-size: 32rpx;
   margin-bottom: 20rpx;
 }
 
-.prize-type > .type > text {
-  background: url("http://192.168.43.35:3000/public/images/type02.png") top/100% 100% no-repeat;
+.prize-type>.type>text {
+  background: url("http://192.168.2.102:3000/public/images/type02.png") top/100% 100% no-repeat;
   padding: 20rpx 20rpx 15rpx;
   width: 25%;
   text-align: center;
   color: #8f00ff;
 }
 
-.prize-type > .type > text.active {
-  background: url("http://192.168.43.35:3000/public/images/type01.png");
+.prize-type>.type>text.active {
+  background: url("http://192.168.2.102:3000/public/images/type01.png");
   color: #fff;
 }
 
-.prize-type > .items > image {
+.prize-type>.items>image {
   width: 100%;
 }
 
@@ -147,6 +147,6 @@ swiper {
   margin: 20rpx 8%;
 }
 
-swiper-item > image {
+swiper-item>image {
   width: 100%;
 }

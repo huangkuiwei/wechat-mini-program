@@ -1,4 +1,8 @@
-<view>
-  <view>Hello World</view>
-  <text>Hello World</text>
+<view class="top">
+  <scroll-view class="middle">
+    <text class="bottom">Hello World</text>
+    <text class="bottom">Hello World</text>
+    <text class="bottom">Hello World</text>
+    <text class="bottom">Hello World</text>
+  </scroll-view>
 </view>

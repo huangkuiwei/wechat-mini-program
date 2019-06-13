@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "drawn-prize-list": "/components/drawn-prize-list/drawn-prize-list"
+  }
 }
