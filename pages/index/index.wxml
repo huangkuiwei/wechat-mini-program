@@ -4,6 +4,11 @@
   <text class="rule">投诉 | 活动规则</text>
   <view class="draw">
     <image class="box-bg" mode="widthFix" src="{{baseURL}}/box-bg.png"></image>
+    <swiper autoplay interval="{{3000}}" circular vertical wx:if="{{recodeList.length > 0}}" class="drwan-pirze">
+      <swiper-item wx:for="{{recodeList}}" wx:key="{{index}}">
+        恭喜{{item.phn}}获得{{item.prizeName}}
+      </swiper-item>
+    </swiper>
     <text class="tip" bindtap="scrollToTip">看看盒子里都有啥</text>
     <view class="prize">
       <view wx:for="{{prizeList}}" wx:key="item.id">

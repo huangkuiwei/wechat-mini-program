@@ -1,6 +1,6 @@
-let baseURL = 'http://192.168.2.102/'
+let baseURL = 'http://192.168.2.102:3000/';
 
-function request(method, url, data, options) {
+function request(method, url, data = {}, options = {}) {
   url = baseURL + url;
   if (options.lock) {
     wx.showLoading({
@@ -16,7 +16,7 @@ function request(method, url, data, options) {
       header: options.header,
       success: res => {
         if (res.data.code === 0) {
-          resolve(res.data.datas)
+          resolve(res.data.data)
         } else {
           reject(handleError(res.data))
         }

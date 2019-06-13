@@ -150,3 +150,23 @@ swiper {
 swiper-item>image {
   width: 100%;
 }
+
+.drwan-pirze {
+  position: absolute;
+  top: 3.5%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 65%;
+  text-align: center;
+  font-size: 24rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+}
+
+.drwan-pirze swiper-item {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fff;
+}

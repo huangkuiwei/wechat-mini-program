@@ -1,13 +1,14 @@
 let baseURL = getApp().globalData.baseURL;
+let request = require('../../util/request.js');
 
 Page({
   data: {
     message: 'Hello',
     prizeList: [{
-        id: 0,
-        image: `${baseURL}/prize-bg01.png`,
-        text: '大气'
-      },
+      id: 0,
+      image: `${baseURL}/prize-bg01.png`,
+      text: '大气'
+    },
       {
         id: 1,
         image: `${baseURL}/prize-bg01.png`,
@@ -50,10 +51,17 @@ Page({
       }
     ],
     menu: 1,
-    baseURL: 'http://192.168.2.102:3000/public/images'
+    baseURL: 'http://192.168.2.102:3000/public/images',
+    recodeList: []
   },
   onLoad() {
-    console.log(this)
+    request.post('post/winningRecord/queryAllWinningRecordList', {}, {
+      lock: true
+    }).then(data => {
+      this.setData({
+        recodeList: data
+      })
+    })
   },
   getPrize(e) {
     let id = e.target.dataset.id;
