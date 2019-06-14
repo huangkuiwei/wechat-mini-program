@@ -51,9 +51,46 @@ Page({
       }
     ],
     menu: 1,
-    baseURL: 'http://192.168.43.35:3000/public/images',
+    complainList: [{
+        id: 0,
+        reason: '欺诈',
+        select: false
+      },
+      {
+        id: 1,
+        reason: '色情',
+        select: false
+      },
+      {
+        id: 2,
+        reason: '诱导行为',
+        select: false
+      },
+      {
+        id: 3,
+        reason: '不实信息',
+        select: false
+      },
+      {
+        id: 4,
+        reason: '违法行为',
+        select: false
+      },
+      {
+        id: 5,
+        reason: '侵权',
+        select: false
+      },
+      {
+        id: 6,
+        reason: '其他',
+        select: false
+      },
+    ],
+    baseURL: 'http://192.168.2.102:3000/public/images',
     recodeList: [],
-    ruleDialog: false
+    ruleDialog: false,
+    complainDialog: false
   },
   onLoad() {
     request.post('post/winningRecord/queryAllWinningRecordList', {}, {
@@ -115,16 +152,34 @@ Page({
       })
     }
   },
-  showRuleDialog() {
-    this.setData({
-      ruleDialog: true
-    })
+  showDialog(e) {
+    if (e.target.dataset.type === 'rule') {
+      this.setData({
+        ruleDialog: true
+      })
+    } else if (e.target.dataset.type === 'complain') {
+      this.setData({
+        complainDialog: true
+      })
+    }
   },
   close(e) {
     if (e.target.dataset.layer) {
       this.setData({
-        ruleDialog: false
+        ruleDialog: false,
+        complainDialog: false
       })
     }
+  },
+  selectReason(e) {
+    let index = e.target.dataset.id;
+    this.data.complainList.forEach(item => {
+      let current = `complainList[${item.id}].select`
+      if (index === item.id) {
+        this.setData({
+          [current]: !item.select
+        })
+      }
+    })
   }
 });

@@ -1,9 +1,9 @@
 <view class="index">
   <image class="top-bg" mode="widthFix" src="{{baseURL}}/top-bg.png"></image>
   <image class="telecom" mode="widthFix" src="{{baseURL}}/telecom.png"></image>
-  <view class="rule">
-    <text>投诉</text> |
-    <text bindtap="showRuleDialog">活动规则</text>
+  <view class="options">
+    <text data-type="complain" bindtap="showDialog">投诉</text> |
+    <text data-type="rule" bindtap="showDialog">活动规则</text>
   </view>
   <view class="draw">
     <image class="box-bg" mode="widthFix" src="{{baseURL}}/box-bg.png"></image>
@@ -69,7 +69,7 @@
     <view class="header">
       <view>活动规则</view>
     </view>
-    <scroll-view scroll-y class="body">
+    <scroll-view scroll-y class="body rule">
       <view>1. 活动时间：2018年12月7日-12月15日</view>
       <view>2. 活动对象：湖南电信用户</view>
       <view>3. 用户初次参与活动有1次抽现金红包机会，每成功邀请1位好友首次关注“中国电信湖南客服”即可获得1次抽取现金红包机会。</view>
@@ -80,6 +80,25 @@
     </scroll-view>
     <view class="footer">
 
+    </view>
+  </view>
+</view>
+
+<!-- 投诉 dialog -->
+<view data-layer wx:if="{{complainDialog}}" class="layer" bindtap="close">
+  <view class="dialog">
+    <view class="header">
+
+    </view>
+    <scroll-view scroll-y class="body complain">
+      <view class="reason">请选择投诉原因</view>
+      <view data-id="{{item.id}}" class="list {{item.select ? 'active' : ''}}" bindtap="selectReason" wx:for="{{complainList}}" wx:key="{{index}}">
+        <text>{{item.reason}}</text>
+        <text wx:if="{{item.select}}">✔</text>
+      </view>
+    </scroll-view>
+    <view class="footer">
+      <button>提交</button>
     </view>
   </view>
 </view>

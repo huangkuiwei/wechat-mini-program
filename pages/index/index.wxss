@@ -13,7 +13,7 @@ page {
   width: 25%;
 }
 
-.rule {
+.options {
   position: absolute;
   top: 20rpx;
   right: 25rpx;
@@ -39,7 +39,7 @@ page {
   color: #ff7a24;
   font-weight: bold;
   width: 25rpx;
-  background: url("http://192.168.43.35:3000/public/images/look-bg.png") top/100% 100% no-repeat;
+  background: url("http://192.168.2.102:3000/public/images/look-bg.png") top/100% 100% no-repeat;
   padding: 20rpx;
 }
 
@@ -105,7 +105,7 @@ page {
 
 .prize-type {
   margin: 0 8%;
-  background: url("http://192.168.43.35:3000/public/images/type-bg.png") top/100% 100% no-repeat;
+  background: url("http://192.168.2.102:3000/public/images/type-bg.png") top/100% 100% no-repeat;
 }
 
 .prize-type {
@@ -127,7 +127,7 @@ page {
 }
 
 .prize-type>.type>text {
-  background: url("http://192.168.43.35:3000/public/images/type02.png") top/100% 100% no-repeat;
+  background: url("http://192.168.2.102:3000/public/images/type02.png") top/100% 100% no-repeat;
   padding: 20rpx 20rpx 15rpx;
   width: 25%;
   text-align: center;
@@ -135,7 +135,7 @@ page {
 }
 
 .prize-type>.type>text.active {
-  background: url("http://192.168.43.35:3000/public/images/type01.png");
+  background: url("http://192.168.2.102:3000/public/images/type01.png") top/100% 100% no-repeat;
   color: #fff;
 }
 
@@ -181,10 +181,33 @@ swiper-item>image {
   margin-top: -52rpx;
   letter-spacing: 1px;
   text-shadow: 0 0 5px #ffde29;
-  background: url("http://192.168.43.35:3000/public/images/text-box.png") top/100% 100% no-repeat;
+  background: url("http://192.168.2.102:3000/public/images/text-box.png") top/100% 100% no-repeat;
 }
 
-scroll-view view {
+scroll-view.rule view {
   font-size: 30rpx;
   text-align: justify;
+}
+
+scroll-view.complain view.reason {
+  text-align: center;
+  margin: 30rpx 0;
+  letter-spacing: 2px;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+scroll-view.complain view.list {
+  border-bottom: 1px solid #fff;
+  padding-bottom: 15rpx;
+  margin-bottom: 15rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+scroll-view.complain view.active {
+  color: #ffde29;
+  border-bottom: 1px solid #ffde29;
 }
