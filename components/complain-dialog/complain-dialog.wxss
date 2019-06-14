@@ -1,0 +1,32 @@
+.reason {
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 40rpx;
+  font-weight: bold;
+  margin: 20rpx 0;
+}
+
+.list {
+  border-bottom: 1px solid #fff;
+  padding-bottom: 15rpx;
+  margin-bottom: 15rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list.active {
+  color: #ffde29;
+  border-bottom: 1px solid #ffde29;
+}
+
+.content {
+  height: 120rpx;
+  width: 100%;
+  background: #fff;
+  border-radius: 10rpx;
+  font-size: 30rpx;
+  color: #000;
+  text-indent: 20rpx;
+}

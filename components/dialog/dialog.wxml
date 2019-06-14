@@ -1,0 +1,21 @@
+<view data-layer class="layer" wx:if="{{open}}">
+  <view class="dialog">
+    <!-- 关闭按钮 -->
+    <view wx:if="{{cancelable}}" class="close" bindtap="closeLayer">+</view>
+
+    <!-- header -->
+    <view class="header">
+      <slot name="header"></slot>
+    </view>
+
+    <!-- body -->
+    <scroll-view scroll-y class="body">
+      <slot></slot>
+    </scroll-view>
+
+    <!-- footer -->
+    <view class="footer">
+      <slot name="footer"></slot>
+    </view>
+  </view>
+</view>

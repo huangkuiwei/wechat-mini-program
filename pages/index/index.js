@@ -3,7 +3,6 @@ let request = require('../../util/request.js');
 
 Page({
   data: {
-    message: 'Hello',
     prizeList: [{
         id: 0,
         image: `${baseURL}/prize-bg01.png`,
@@ -51,42 +50,6 @@ Page({
       }
     ],
     menu: 1,
-    complainList: [{
-        id: 0,
-        reason: '欺诈',
-        select: false
-      },
-      {
-        id: 1,
-        reason: '色情',
-        select: false
-      },
-      {
-        id: 2,
-        reason: '诱导行为',
-        select: false
-      },
-      {
-        id: 3,
-        reason: '不实信息',
-        select: false
-      },
-      {
-        id: 4,
-        reason: '违法行为',
-        select: false
-      },
-      {
-        id: 5,
-        reason: '侵权',
-        select: false
-      },
-      {
-        id: 6,
-        reason: '其他',
-        select: false
-      },
-    ],
     baseURL: 'http://192.168.2.102:3000/public/images',
     recodeList: [],
     ruleDialog: false,
@@ -101,6 +64,7 @@ Page({
       })
     })
   },
+  // 点击礼盒动作
   getPrize(e) {
     let id = e.target.dataset.id;
     this.data.prizeList.map(item => {
@@ -116,12 +80,14 @@ Page({
       }
     })
   },
+  // 心愿盒子大揭秘菜单切换
   changeItem(e) {
     let menu = e.target.dataset.menu;
     this.setData({
       menu
     })
   },
+  // 看看盒子里面都有啥
   scrollToTip() {
     wx.createSelectorQuery().select('#tip').boundingClientRect(rect => {
       wx.pageScrollTo({
@@ -129,6 +95,7 @@ Page({
       })
     }).exec()
   },
+  // 开启礼盒动作
   openPrize() {
     let isSelect = this.data.prizeList.some(item => {
       return item.image === `${baseURL}/prize-bg02.png`
@@ -162,24 +129,5 @@ Page({
         complainDialog: true
       })
     }
-  },
-  close(e) {
-    if (e.target.dataset.layer) {
-      this.setData({
-        ruleDialog: false,
-        complainDialog: false
-      })
-    }
-  },
-  selectReason(e) {
-    let index = e.target.dataset.id;
-    this.data.complainList.forEach(item => {
-      let current = `complainList[${item.id}].select`
-      if (index === item.id) {
-        this.setData({
-          [current]: !item.select
-        })
-      }
-    })
   }
 });

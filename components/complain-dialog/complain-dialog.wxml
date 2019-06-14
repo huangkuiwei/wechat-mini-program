@@ -1,0 +1,9 @@
+<dialog cancelable>
+  <view class="reason">请选择投诉原因</view>
+  <view data-id="{{item.id}}" class="list {{item.select ? 'active' : ''}}" bindtap="selectReason" wx:for="{{complainList}}" wx:key="{{index}}">
+    <text>{{item.reason}}</text>
+    <text wx:if="{{item.select}}">✔</text>
+  </view>
+  <textarea wx:if="{{complainList[complainList.length - 1].select}}" class="content" placeholder="请输入投诉内容" placeholder-style="font-size: 30rpx;"></textarea>
+  <button slot="footer">提交</button>
+</dialog>
