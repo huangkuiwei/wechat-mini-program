@@ -9,9 +9,7 @@ function watch(context, obj) {
         return value
       },
       set(newValue) {
-        if (value === newValue) {
-          return
-        } else {
+        if (value !== newValue) {
           value = newValue;
           obj.hasOwnProperty(keys[i]) && obj[keys[i]].call(context)
         }

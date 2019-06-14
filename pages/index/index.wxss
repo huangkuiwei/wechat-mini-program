@@ -39,7 +39,7 @@ page {
   color: #ff7a24;
   font-weight: bold;
   width: 25rpx;
-  background: url("http://192.168.2.102:3000/public/images/look-bg.png") top/100% 100% no-repeat;
+  background: url("http://192.168.43.35:3000/public/images/look-bg.png") top/100% 100% no-repeat;
   padding: 20rpx;
 }
 
@@ -105,7 +105,7 @@ page {
 
 .prize-type {
   margin: 0 8%;
-  background: url("http://192.168.2.102:3000/public/images/type-bg.png") top/100% 100% no-repeat;
+  background: url("http://192.168.43.35:3000/public/images/type-bg.png") top/100% 100% no-repeat;
 }
 
 .prize-type {
@@ -127,7 +127,7 @@ page {
 }
 
 .prize-type>.type>text {
-  background: url("http://192.168.2.102:3000/public/images/type02.png") top/100% 100% no-repeat;
+  background: url("http://192.168.43.35:3000/public/images/type02.png") top/100% 100% no-repeat;
   padding: 20rpx 20rpx 15rpx;
   width: 25%;
   text-align: center;
@@ -135,7 +135,7 @@ page {
 }
 
 .prize-type>.type>text.active {
-  background: url("http://192.168.2.102:3000/public/images/type01.png") top/100% 100% no-repeat;
+  background: url("http://192.168.43.35:3000/public/images/type01.png") top/100% 100% no-repeat;
   color: #fff;
 }
 

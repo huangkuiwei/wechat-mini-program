@@ -41,16 +41,20 @@ Component({
     ]
   },
   methods: {
+    // 选择投诉原因
     selectReason(e) {
       let index = e.target.dataset.id;
       this.data.complainList.forEach(item => {
-        let current = `complainList[${item.id}].select`
+        let current = `complainList[${item.id}].select`;
         if (index === item.id) {
           this.setData({
             [current]: !item.select
           })
         }
       })
+    },
+    close() {
+      this.triggerEvent('close')
     }
   }
-})
+});

@@ -1,15 +1,16 @@
 Component({
+  options: {
+    multipleSlots: true
+  },
   properties: {
     cancelable: Boolean
   },
-  data: {
-    open: true
-  },
   methods: {
-    closeLayer() {
-      this.setData({
-        open: false
-      })
+    closeLayer(e) {
+      console.log(e);
+      if (e.target.dataset.cancelable) {
+        this.triggerEvent('close')
+      }
     }
   }
-})
+});

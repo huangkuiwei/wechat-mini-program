@@ -50,7 +50,7 @@ Page({
       }
     ],
     menu: 1,
-    baseURL: 'http://192.168.2.102:3000/public/images',
+    baseURL: 'http://192.168.43.35:3000/public/images',
     recodeList: [],
     ruleDialog: false,
     complainDialog: false
@@ -119,6 +119,7 @@ Page({
       })
     }
   },
+  // 弹窗
   showDialog(e) {
     if (e.target.dataset.type === 'rule') {
       this.setData({
@@ -127,6 +128,17 @@ Page({
     } else if (e.target.dataset.type === 'complain') {
       this.setData({
         complainDialog: true
+      })
+    }
+  },
+  close(e) {
+    if (e.target.dataset.type === 'complain') {
+      this.setData({
+        complainDialog: false
+      })
+    } else if (e.target.dataset.type === 'rule') {
+      this.setData({
+        ruleDialog: false
       })
     }
   }

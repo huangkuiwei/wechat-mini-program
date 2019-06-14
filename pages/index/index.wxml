@@ -64,7 +64,7 @@
 </view>
 
 <!-- 活动规则 dialog -->
-<rule-dialog wx:if="{{ruleDialog}}"></rule-dialog>
+<rule-dialog data-type="rule" wx:if="{{ruleDialog}}" bindclose="close"></rule-dialog>
 
 <!-- 投诉 dialog -->
-<complain-dialog wx:if="{{complainDialog}}"></complain-dialog>
+<complain-dialog data-type="complain" wx:if="{{complainDialog}}" bindclose="close"></complain-dialog>

@@ -1,1 +1,4 @@
-/* components/rule-dialog.wxss */
+.rule {
+  font-size: 30rpx;
+  text-align: justify;
+}

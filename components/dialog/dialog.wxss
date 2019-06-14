@@ -28,6 +28,7 @@
   border-radius: 8px;
   border: 3px solid #bc69ff;
   animation: zoomIn 0.2s;
+  z-index: 19;
 }
 
 .close {
@@ -44,16 +45,26 @@
   z-index: 99;
 }
 
-.header {
+.header > view {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: -52rpx;
+  padding: 30rpx 0;
+  font-size: 40rpx;
+  color: #ffde29;
+  letter-spacing: 1px;
+  text-shadow: 0 0 5px #ffde29;
+  background: url("http://192.168.43.35:3000/public/images/text-box.png") top/100% 100% no-repeat;
 }
 
 .body {
   max-height: 60vh;
-  margin: 10rpx 0;
+  margin: 20rpx 0;
 }
 
 .footer {
-  margin: 10rpx 0;
+  margin: 20rpx 0;
 }
 
 @keyframes fadeIn {
