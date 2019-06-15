@@ -1,7 +1,7 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/my-prize/my-prize"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffff00",
@@ -15,11 +15,11 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "index"
+        "text": "我的心愿机"
       },
       {
-        "pagePath": "pages/logs/logs",
-        "text": "logs"
+        "pagePath": "pages/my-prize/my-prize",
+        "text": "我的奖品"
       }
     ]
   },

@@ -7,7 +7,6 @@ Component({
   },
   methods: {
     closeLayer(e) {
-      console.log(e);
       if (e.target.dataset.cancelable) {
         this.triggerEvent('close')
       }

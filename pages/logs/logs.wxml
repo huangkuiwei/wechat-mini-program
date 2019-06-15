@@ -1,3 +1,0 @@
-<view data-type="parent" bindtap="test">
-  <text>hello world</text>
-</view>

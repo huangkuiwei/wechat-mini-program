@@ -104,12 +104,9 @@ page {
 }
 
 .prize-type {
+  padding: 40rpx;
   margin: 0 8%;
   background: url("http://192.168.43.35:3000/public/images/type-bg.png") top/100% 100% no-repeat;
-}
-
-.prize-type {
-  padding: 40rpx;
 }
 
 .prize-type>.tip {
@@ -139,8 +136,12 @@ page {
   color: #fff;
 }
 
-.prize-type>.items>image {
+.prize-type>.item1>image, .prize-type>.item3>image {
   width: 100%;
+}
+
+.prize-type>.item2>image {
+  width: 33.3%;
 }
 
 swiper {
