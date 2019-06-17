@@ -84,6 +84,30 @@ Page({
         remark: '学堂青少版，属于青少年的专属课程节目，师大附中＋黄冈课堂等高质量教学内容，等你探索！'
       },
     ],
+    swiperList: [{
+        src: `${baseURL}/ad6.jpg`,
+        link: 'https://mp.weixin.qq.com/s?__biz=Mzg3MTAxNDk4NA==&mid=2247483823&idx=1&sn=5e345d7f1171d8f615940aec02ff50d6&chksm=ce85b688f9f23f9ec954680a9c0eea222afe1c178f057c69b423ec41229625e91f4697ff2d79&bizpsid=0&scene=126&ascene=3&devicetype=android-26&version=2700043b&nettype=ctnet&abtest_cookie=BQABAAoACwASABMAFQAHACOXHgBWmR4AyZkeANyZHgDxmR4AA5oeAAyaHgAAAA%3D%3D&lang=zh_CN&pass_ticket=gHEDAYWitt2mzMj0ZJejmYeY0u5adhyR1Ej1ExjZ4uVCOhvWT7yc%2BP3Ik2A5Ca20&wx_header=1'
+      },
+      {
+        src: `${baseURL}/ad3.jpg`,
+        link: 'https://mp.weixin.qq.com/s?__biz=MjM5NDY2MjU4MQ==&mid=503417440&idx=1&sn=de1af902a60b4a350dad5bfd73f2eff9&chksm=3d717bba0a06f2acf53b4862ad00969d310bc30007c8b3310f139e1ec928c5f2d1d669021b02&mpshare=1&scene=1&srcid=05154OCEE4xlRbchpepyUnZM&from=singlemessage&ascene=1&devicetype=android-28&version=2700043a&nettype=WIFI&abtest_cookie=BAABAAoACwASABMABQAjlx4AzZkeANyZHgD5mR4AAZoeAAAA&lang=zh_CN&pass_ticket=zxBDDV3khGaVWDlLfqKmNyXw5h3PodYlWwNkLJ6qMHzG0kDOBB1pdwiTLkM7MWSz&wx_header=1'
+      },
+      {
+        src: `${baseURL}/ad4.jpg`,
+        link: 'http://www.piaodage.com/m2c/2/ticket.jsp?info_id=24808864&tree_id=0&order_cust_id=2347777&user_id=15207958108&fromid=o8wJQ1iHr0uaRGCmMD6jk6WoLFpY'
+      },
+      {
+        src: `${baseURL}/ad5.jpg`,
+        link: 'https://mp.weixin.qq.com/s/HvPPGiS2_qx9UE78OWfUYw'
+      },
+      {
+        src: `${baseURL}/ad2.jpg`
+      },
+      {
+        src: `${baseURL}/ad1.jpg`,
+        link: 'https://www.baidu.com'
+      }
+    ],
     currentService: {},
     menu: 1,
     baseURL,
@@ -186,6 +210,15 @@ Page({
     } else if (e.target.dataset.type === 'service') {
       this.setData({
         serviceDialog: false
+      })
+    }
+  },
+  // 轮播图跳转
+  jump(e) {
+    let src = e.target.dataset.src;
+    if(src) {
+      wx.navigateTo({
+        url: `/pages/web-view/web-view?src=${encodeURIComponent(src)}`
       })
     }
   }

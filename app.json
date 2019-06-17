@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/my-prize/my-prize"
+    "pages/my-prize/my-prize",
+    "pages/web-view/web-view"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffff00",

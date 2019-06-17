@@ -45,20 +45,8 @@
     </view>
   </view>
   <swiper indicator-dots autoplay interval="{{3000}}" circular>
-    <swiper-item>
-      <image mode="widthFix" src="{{baseURL}}/ad1.jpg"></image>
-    </swiper-item>
-    <swiper-item>
-      <image mode="widthFix" src="{{baseURL}}/ad2.jpg"></image>
-    </swiper-item>
-    <swiper-item>
-      <image mode="widthFix" src="{{baseURL}}/ad3.jpg"></image>
-    </swiper-item>
-    <swiper-item>
-      <image mode="widthFix" src="{{baseURL}}/ad4.jpg"></image>
-    </swiper-item>
-    <swiper-item>
-      <image mode="widthFix" src="{{baseURL}}/ad5.jpg"></image>
+    <swiper-item wx:for="{{swiperList}}" wx:key="{{index}}">
+      <image bindtap="jump" data-src="{{item.link}}" mode="widthFix" src="{{item.src}}"></image>
     </swiper-item>
   </swiper>
 </view>
