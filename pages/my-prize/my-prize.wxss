@@ -1,0 +1,50 @@
+page {
+  background: url("http://192.168.43.35:3000/public/images/prize-bg.png") top/100% auto no-repeat;
+}
+
+.info {
+  background: url("http://192.168.43.35:3000/public/images/info-bg.png") top/100% 100% no-repeat;
+  padding: 50rpx 80rpx 60rpx 60rpx;
+  margin-top: 90rpx;
+  display: flex;
+  color: #fff;
+  overflow: hidden;
+}
+
+.header {
+  height: 110rpx;
+  width: 110rpx;
+  background: #fff;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.invite {
+  margin-left: 20rpx;
+  overflow: hidden;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.invite > text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 35rpx;
+}
+
+.invite button {
+  font-size: 27rpx;
+  padding: 3px 5rpx;
+  width: 145rpx;
+}
+
+.count {
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  white-space: nowrap;
+}

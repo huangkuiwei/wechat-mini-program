@@ -1,0 +1,9 @@
+<template name="complain-rule">
+  <view class="complain-rule">
+    <image class="telecom" mode="widthFix" src="{{baseURL}}/telecom.png"></image>
+    <view class="options">
+      <text data-type="complain" bindtap="showDialog">投诉</text> |
+      <text data-type="rule" bindtap="showDialog">活动规则</text>
+    </view>
+  </view>
+</template>

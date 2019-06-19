@@ -1,0 +1,22 @@
+<import src="../../template/complain-rule.wxml" />
+
+<view class="my-prize">
+  <template is="complain-rule" data="{{baseURL}}"></template>
+  <view class="info">
+    <view class="header"></view>
+    <view class="invite">
+      <text>黄先生</text>
+      <button>邀请记录</button>
+    </view>
+    <view class="count">
+      <text>开礼盒总次数：10次</text>
+      <text>剩余次数：2次</text>
+    </view>
+  </view>
+</view>
+
+<!-- 活动规则 dialog -->
+<rule-dialog data-type="rule" wx:if="{{ruleDialog}}" bindclose="close"></rule-dialog>
+
+<!-- 投诉 dialog -->
+<complain-dialog data-type="complain" wx:if="{{complainDialog}}" bindclose="close"></complain-dialog>

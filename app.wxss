@@ -1,3 +1,8 @@
+page {
+  background: #480495;
+  height: 100%;
+}
+
 button {
   line-height: 1;
   padding: 15rpx 0;
@@ -6,4 +11,22 @@ button {
   background: #ffde29;
   border-radius: 30rpx;
   font-size: 35rpx;
+  margin: 0;
+}
+
+/* complain-rule */
+
+.complain-rule .telecom {
+  position: absolute;
+  top: 20rpx;
+  left: 25rpx;
+  width: 25%;
+}
+
+.complain-rule .options {
+  position: absolute;
+  top: 20rpx;
+  right: 25rpx;
+  color: #fff;
+  font-size: 26rpx;
 }

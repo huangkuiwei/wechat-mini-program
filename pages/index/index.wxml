@@ -1,10 +1,8 @@
+<import src="../../template/complain-rule.wxml" />
+
 <view class="index">
   <image class="top-bg" mode="widthFix" src="{{baseURL}}/top-bg.png"></image>
-  <image class="telecom" mode="widthFix" src="{{baseURL}}/telecom.png"></image>
-  <view class="options">
-    <text data-type="complain" bindtap="showDialog">投诉</text> |
-    <text data-type="rule" bindtap="showDialog">活动规则</text>
-  </view>
+  <template is="complain-rule" data="{{baseURL}}"></template>
   <view class="draw">
     <image class="box-bg" mode="widthFix" src="{{baseURL}}/box-bg.png"></image>
     <swiper autoplay interval="{{3000}}" circular vertical wx:if="{{recodeList.length > 0}}" class="drwan-pirze">

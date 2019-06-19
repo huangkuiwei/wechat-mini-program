@@ -1,24 +1,5 @@
-page {
-  background: #480495;
-}
-
 .top-bg {
   width: 100%;
-}
-
-.telecom {
-  position: absolute;
-  top: 20rpx;
-  left: 25rpx;
-  width: 25%;
-}
-
-.options {
-  position: absolute;
-  top: 20rpx;
-  right: 25rpx;
-  color: #fff;
-  font-size: 26rpx;
 }
 
 .draw {

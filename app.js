@@ -1,6 +1,9 @@
 App({
   onLaunch() {
-
+    // TODO
+    wx.switchTab({
+      url: '/pages/my-prize/my-prize',
+    })
   },
   globalData: {
     // 本地 ip 地址
