@@ -2,20 +2,20 @@
 <view class="layer" bindtap="closeLayer">
   <view class="dialog">
     <!-- 关闭按钮 -->
-    <view data-cancelable wx:if="{{cancelable}}" class="close" bindtap="closeLayer">+</view>
+    <view wx:if="{{cancelable}}" class="close" bindtap="closeLayer">+</view>
 
     <!-- header -->
-    <view class="header">
+    <view class="header" catchtap="isBug">
       <slot name="header"></slot>
     </view>
 
     <!-- body -->
-    <scroll-view scroll-y class="body">
+    <scroll-view scroll-y class="body" catchtap="isBug">
       <slot></slot>
     </scroll-view>
 
     <!-- footer -->
-    <view class="footer">
+    <view class="footer" catchtap="isBug">
       <slot name="footer"></slot>
     </view>
   </view>

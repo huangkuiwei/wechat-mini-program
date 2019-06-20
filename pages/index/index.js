@@ -115,6 +115,8 @@ Page({
     ruleDialog: false,
     complainDialog: false,
     serviceDialog: false,
+    getPrizeDialog: false,
+    prize: {},
     swiperHeight: '150px'
   },
   onLoad() {
@@ -168,16 +170,20 @@ Page({
         icon: 'none'
       })
     } else {
-      wx.showLoading({
-        title: '抽奖中...',
-        success: () => {
-          setTimeout(() => {
-            wx.hideLoading();
-            wx.showToast({
-              title: '抽奖完成~'
-            })
-          }, 2000)
-        }
+      // wx.showLoading({
+        // title: '抽奖中...',
+        // success: () => {
+          // setTimeout(() => {
+            // wx.hideLoading();
+            // wx.showToast({
+              // title: '抽奖完成~'
+            // })
+          // }, 2000)
+        // }
+      // })
+      this.setData({
+        prize: {prizeName: '华为P30手机'},
+        getPrizeDialog: true
       })
     }
   },
@@ -196,6 +202,10 @@ Page({
         currentService: e.target.dataset.item,
         serviceDialog: true
       })
+    } else if (e.target.dataset.type === 'getPrize') {
+      this.setData({
+        getPrizeDialog: true
+      })
     }
   },
   // 关闭弹窗
@@ -211,6 +221,10 @@ Page({
     } else if (e.target.dataset.type === 'service') {
       this.setData({
         serviceDialog: false
+      })
+    } else if (e.target.dataset.type === 'getPrize') {
+      this.setData({
+        getPrizeDialog: false
       })
     }
   },

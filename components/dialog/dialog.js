@@ -3,13 +3,19 @@ Component({
     multipleSlots: true
   },
   properties: {
-    cancelable: Boolean
+    cancelable: {
+      type: Boolean,
+      value: true
+    }
   },
   methods: {
     closeLayer(e) {
-      if (e.target.dataset.cancelable) {
+      if (this.data.cancelable) {
         this.triggerEvent('close')
       }
+    },
+    isBug(e) {
+      console.log('这是一个bug')
     }
   }
 });

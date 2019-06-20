@@ -1,5 +1,5 @@
 page {
-  background: #480495 url("http://192.168.2.102:3000/public/images/prize-bg.png") top/100% auto no-repeat;
+  background: #480495 url("http://192.168.43.35:3000/public/images/prize-bg.png") top/100% auto no-repeat;
 }
 
 .my-prize {
@@ -7,7 +7,7 @@ page {
 }
 
 .info {
-  background: url("http://192.168.2.102:3000/public/images/info-bg.png") top/100% 100% no-repeat;
+  background: url("http://192.168.43.35:3000/public/images/info-bg.png") top/100% 100% no-repeat;
   padding: 50rpx 80rpx 60rpx 60rpx;
   display: flex;
   margin-top: 90rpx;
@@ -55,7 +55,7 @@ page {
 
 .item {
   margin: 0 60rpx;
-  background: url("http://192.168.2.102:3000/public/images/prize-recode-bg.png") top/100% 100% no-repeat;
+  background: url("http://192.168.43.35:3000/public/images/prize-recode-bg.png") top/100% 100% no-repeat;
   padding: 30rpx;
   display: flex;
   color: #fff;

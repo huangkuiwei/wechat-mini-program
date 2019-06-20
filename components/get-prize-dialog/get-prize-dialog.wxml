@@ -1,0 +1,26 @@
+<wxs module="myFun">
+  function getTip(arr) {
+    var index = Math.floor(Math.random() * arr.length);
+    return arr[index]
+  }
+  module.exports.getTip = getTip
+</wxs>
+
+<dialog bindclose="close">
+  <view class="body">
+    <view class="tip">{{myFun.getTip(tips)}}</view>
+    <view class="">恭喜你获得</view>
+    <view>
+      <view>华为P30手机</view>
+      <view>0元领资格</view>
+    </view>
+    <view>
+      <view>邀请小伙伴帮你点亮心愿</view>
+      <view>就可以免费领走奖品哦！</view>
+    </view>
+  </view>
+  <view slot="footer">
+    <button>立即邀请</button>
+    <button>继续开礼盒</button>
+  </view>
+</dialog>

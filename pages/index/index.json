@@ -2,6 +2,7 @@
   "usingComponents": {
     "complain-dialog": "/components/complain-dialog/complain-dialog",
     "rule-dialog": "/components/rule-dialog/rule-dialog",
-    "service-dialog": "/components/service-dialog/service-dialog"
+    "service-dialog": "/components/service-dialog/service-dialog",
+    "get-prize-dialog": "/components/get-prize-dialog/get-prize-dialog"
   }
 }

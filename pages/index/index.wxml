@@ -57,3 +57,6 @@
 
 <!-- 业务说明 dialog -->
 <service-dialog data-type="service" wx:if="{{serviceDialog}}" current-service="{{currentService}}" bindclose="close"></service-dialog>
+
+<!-- 抽奖弹窗 -->
+<get-prize-dialog data-type="getPrize" wx:if="{{getPrizeDialog}}" prize="{{prize}}" bindclose="close"></get-prize-dialog>
