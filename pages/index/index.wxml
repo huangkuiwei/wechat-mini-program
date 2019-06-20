@@ -42,9 +42,9 @@
       <image src="{{baseURL}}/right-prize.png" mode="widthFix"></image>
     </view>
   </view>
-  <swiper indicator-dots autoplay interval="{{3000}}" circular>
+  <swiper style="height: {{swiperHeight}}" indicator-dots autoplay interval="{{3000}}" circular>
     <swiper-item wx:for="{{swiperList}}" wx:key="{{index}}">
-      <image bindtap="jump" data-src="{{item.link}}" mode="widthFix" src="{{item.src}}"></image>
+      <image bindload="{{index === 0 ? 'imageLoad' : ''}}" id="{{index === 0 ? 'swiper-img' : ''}}" bindtap="jump" data-src="{{item.link}}" mode="widthFix" src="{{item.src}}"></image>
     </swiper-item>
   </swiper>
 </view>

@@ -55,7 +55,7 @@
   color: #ffde29;
   letter-spacing: 1px;
   text-shadow: 0 0 5px #ffde29;
-  background: url("http://192.168.43.35:3000/public/images/text-box.png") top/100% 100% no-repeat;
+  background: url("http://192.168.2.102:3000/public/images/text-box.png") top/100% 100% no-repeat;
 }
 
 .body {

@@ -114,7 +114,8 @@ Page({
     recodeList: [],
     ruleDialog: false,
     complainDialog: false,
-    serviceDialog: false
+    serviceDialog: false,
+    swiperHeight: '150px'
   },
   onLoad() {
     request.post('post/winningRecord/queryAllWinningRecordList', {}, {
@@ -173,7 +174,7 @@ Page({
           setTimeout(() => {
             wx.hideLoading();
             wx.showToast({
-              title: '抽奖完成~',
+              title: '抽奖完成~'
             })
           }, 2000)
         }
@@ -216,10 +217,18 @@ Page({
   // 轮播图跳转
   jump(e) {
     let src = e.target.dataset.src;
-    if(src) {
+    if (src) {
       wx.navigateTo({
         url: `/pages/web-view/web-view?src=${encodeURIComponent(src)}`
       })
     }
-  }
+  },
+  // 轮播图高度自适应
+  imageLoad() {
+    wx.createSelectorQuery().select('#swiper-img').boundingClientRect(res => {
+      this.setData({
+        swiperHeight: res.height + 'px'
+      })
+    }).exec()
+  },
 });

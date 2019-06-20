@@ -13,6 +13,18 @@
       <text>剩余次数：2次</text>
     </view>
   </view>
+  <block wx:for="{{prizeList}}" wx:key="{{index}}">
+    <view class="item">
+      <view class="prize-img"></view>
+      <text class="prize-name">{{item.prizeName}}</text>
+      <view class="prize-options">
+        <button wx:if="{{item.prizeType === '实物'}}" size="mini">0元领取</button>
+        <button wx:elif="{{item.prizeType === '业务'}}" size="mini">立即办理</button>
+        <button wx:elif="{{item.prizeType === '话费'}}" size="mini">立即充值</button>
+        <button wx:elif="{{item.prizeType === '红包'}}" size="mini">立即提现</button>
+      </view>
+    </view>
+  </block>
 </view>
 
 <!-- 活动规则 dialog -->

@@ -1,12 +1,16 @@
 page {
-  background: url("http://192.168.43.35:3000/public/images/prize-bg.png") top/100% auto no-repeat;
+  background: #480495 url("http://192.168.2.102:3000/public/images/prize-bg.png") top/100% auto no-repeat;
+}
+
+.my-prize {
+  overflow: hidden;
 }
 
 .info {
-  background: url("http://192.168.43.35:3000/public/images/info-bg.png") top/100% 100% no-repeat;
+  background: url("http://192.168.2.102:3000/public/images/info-bg.png") top/100% 100% no-repeat;
   padding: 50rpx 80rpx 60rpx 60rpx;
-  margin-top: 90rpx;
   display: flex;
+  margin-top: 90rpx;
   color: #fff;
   overflow: hidden;
 }
@@ -47,4 +51,42 @@ page {
   flex-direction: column;
   justify-content: space-around;
   white-space: nowrap;
+}
+
+.item {
+  margin: 0 60rpx;
+  background: url("http://192.168.2.102:3000/public/images/prize-recode-bg.png") top/100% 100% no-repeat;
+  padding: 30rpx;
+  display: flex;
+  color: #fff;
+  align-items: flex-start;
+}
+
+.prize-img {
+  height: 150rpx;
+  width: 150rpx;
+  background: #fff;
+  flex-shrink: 0;
+}
+
+.prize-name {
+  font-size: 30rpx;
+  flex-grow: 1;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin-left: 10rpx;
+}
+
+.prize-options {
+  flex-shrink: 0;
+}
+
+.prize-options button {
+  padding: 15rpx 20rpx;
+  line-height: 1;
 }
