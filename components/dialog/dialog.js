@@ -9,12 +9,12 @@ Component({
     }
   },
   methods: {
-    closeLayer(e) {
+    closeLayer() {
       if (this.data.cancelable) {
         this.triggerEvent('close')
       }
     },
-    isBug(e) {
+    isBug() {
       console.log('这是一个bug')
     }
   }

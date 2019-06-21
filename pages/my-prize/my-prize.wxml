@@ -1,7 +1,9 @@
 <import src="../../template/complain-rule.wxml" />
 
 <view class="my-prize">
-  <template is="complain-rule" data="{{baseURL}}"></template>
+  <template is="complain-rule"></template>
+
+  <!-- 个人信息区域 -->
   <view class="info">
     <view class="header"></view>
     <view class="invite">
@@ -13,7 +15,9 @@
       <text>剩余次数：2次</text>
     </view>
   </view>
-  <block wx:for="{{prizeList}}" wx:key="{{index}}">
+
+  <!-- 我的奖品列表 -->
+  <block wx:for="{{myPrizeList}}" wx:key="{{index}}">
     <view class="item">
       <view class="prize-img"></view>
       <text class="prize-name">{{item.prizeName}}</text>

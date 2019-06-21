@@ -1,7 +1,7 @@
 Component({
   properties: {
     prize: {
-      type: 'Object'
+      type: Object
     }
   },
   data: {

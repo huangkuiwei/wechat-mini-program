@@ -20,7 +20,7 @@
     </view>
   </view>
   <view slot="footer">
-    <button>立即邀请</button>
-    <button>继续开礼盒</button>
+    <button open-type="share" bindtap="close">立即邀请</button>
+    <button bindtap="close">继续开礼盒</button>
   </view>
 </dialog>

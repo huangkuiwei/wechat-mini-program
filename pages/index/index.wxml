@@ -1,10 +1,13 @@
 <import src="../../template/complain-rule.wxml" />
 
 <view class="index">
-  <image class="top-bg" mode="widthFix" src="{{baseURL}}/top-bg.png"></image>
-  <template is="complain-rule" data="{{baseURL}}"></template>
+  <!-- 顶部 -->
+  <image class="top-bg" mode="widthFix" src="http://192.168.2.102:3000/public/images/top-bg.png"></image>
+  <template is="complain-rule"></template>
+
+  <!-- 抽奖区域 -->
   <view class="draw">
-    <image class="box-bg" mode="widthFix" src="{{baseURL}}/box-bg.png"></image>
+    <image class="box-bg" mode="widthFix" src="http://192.168.2.102:3000/public/images/box-bg.png"></image>
     <swiper autoplay interval="{{3000}}" circular vertical wx:if="{{recodeList.length > 0}}" class="drwan-pirze">
       <swiper-item wx:for="{{recodeList}}" wx:key="{{index}}">
         恭喜{{item.phn}}获得{{item.prizeName}}
@@ -14,34 +17,38 @@
     <view class="prize">
       <view wx:for="{{prizeList}}" wx:key="item.id">
         <image bindtap="getPrize" data-id="{{item.id}}" mode="widthFix" src="{{item.image}}"></image>
-        <text class="{{item.image === (baseURL + '/prize-bg02.png') ? 'active' : ''}}">{{item.text}}</text>
+        <text class="{{item.image === ('http://192.168.2.102:3000/public/images/prize-bg02.png') ? 'active' : ''}}">{{item.text}}</text>
       </view>
     </view>
     <view class="btn-bg">
-      <image mode="widthFix" src="{{baseURL}}/btn-bg.png"></image>
+      <image mode="widthFix" src="http://192.168.2.102:3000/public/images/btn-bg.png"></image>
       <text class="open" bindtap="openPrize">开启礼盒</text>
     </view>
   </view>
+
+  <!-- 心愿盒子大揭秘区域 -->
   <view class="prize-type">
-    <view class="tip" id="tip">心愿盒子大揭秘</view>
+    <view class="tip" id="tip">心愿盒子大揭秘区域</view>
     <view class="type">
       <text data-menu="{{1}}" class="{{menu === 1 ? 'active' : ''}}" bindtap="changeItem">重磅好礼包邮送</text>
       <text data-menu="{{2}}" class="{{menu === 2 ? 'active' : ''}}" bindtap="changeItem">超值业务五折办</text>
       <text data-menu="{{3}}" class="{{menu === 3 ? 'active' : ''}}" bindtap="changeItem">特惠福利享不停</text>
     </view>
     <view class="item1" wx:if="{{menu === 1}}">
-      <image src="{{baseURL}}/left-prize01.png" mode="widthFix"></image>
-      <image src="{{baseURL}}/left-prize02.png" mode="widthFix"></image>
-      <image src="{{baseURL}}/left-prize03.png" mode="widthFix"></image>
-      <image src="{{baseURL}}/left-prize04.png" mode="widthFix"></image>
+      <image src="http://192.168.2.102:3000/public/images/left-prize01.png" mode="widthFix"></image>
+      <image src="http://192.168.2.102:3000/public/images/left-prize02.png" mode="widthFix"></image>
+      <image src="http://192.168.2.102:3000/public/images/left-prize03.png" mode="widthFix"></image>
+      <image src="http://192.168.2.102:3000/public/images/left-prize04.png" mode="widthFix"></image>
     </view>
     <view class="item2" wx:if="{{menu === 2}}">
       <image data-item="{{item}}" data-type="service" bindtap="showDialog" wx:for="{{serviceList}}" wx:key="{{index}}" src="{{item.img}}" mode="widthFix"></image>
     </view>
     <view class="item3" wx:if="{{menu === 3}}">
-      <image src="{{baseURL}}/right-prize.png" mode="widthFix"></image>
+      <image src="http://192.168.2.102:3000/public/images/right-prize.png" mode="widthFix"></image>
     </view>
   </view>
+
+  <!-- 轮播图 -->
   <swiper style="height: {{swiperHeight}}" indicator-dots autoplay interval="{{3000}}" circular>
     <swiper-item wx:for="{{swiperList}}" wx:key="{{index}}">
       <image bindload="{{index === 0 ? 'imageLoad' : ''}}" id="{{index === 0 ? 'swiper-img' : ''}}" bindtap="jump" data-src="{{item.link}}" mode="widthFix" src="{{item.src}}"></image>

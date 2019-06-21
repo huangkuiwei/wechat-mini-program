@@ -24,5 +24,10 @@
       }
     ]
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "我要获取你的地理位置干坏事！"
+    }
+  }
 }
