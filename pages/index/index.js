@@ -14,6 +14,13 @@ Page({
     serviceDialog: false,
     getPrizeDialog: false
   },
+  // onLoad
+  onLoad() {
+    // TODO
+    wx.switchTab({
+      url: '/pages/my-prize/my-prize'
+    })
+  },
   // 分享转发事件
   onShareAppMessage() {
     return {

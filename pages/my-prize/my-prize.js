@@ -4,7 +4,8 @@ Page({
   data: {
     myPrizeList: myData.myPrizeList,
     ruleDialog: false,
-    complainDialog: false
+    complainDialog: false,
+    inviteDialog: false
   },
   // 弹窗
   showDialog(e) {
@@ -15,6 +16,10 @@ Page({
     } else if (e.target.dataset.type === 'complain') {
       this.setData({
         complainDialog: true
+      })
+    } else if (e.target.dataset.type === 'invite') {
+      this.setData({
+        inviteDialog: true
       })
     }
   },
@@ -27,6 +32,10 @@ Page({
     } else if (e.target.dataset.type === 'rule') {
       this.setData({
         ruleDialog: false
+      })
+    } else if (e.target.dataset.type === 'invite') {
+      this.setData({
+        inviteDialog: false
       })
     }
   }

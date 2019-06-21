@@ -14,8 +14,8 @@ Component({
         this.triggerEvent('close')
       }
     },
-    isBug() {
-      console.log('这是一个bug')
+    scrolltolower() {
+      this.triggerEvent('scrolltolower')
     }
   }
 });

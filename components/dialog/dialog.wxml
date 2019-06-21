@@ -10,7 +10,7 @@
     </view>
 
     <!-- body -->
-    <scroll-view scroll-y class="body" catchtap="isBug">
+    <scroll-view scroll-y class="body" catchtap="isBug" bindscrolltolower="scrolltolower">
       <slot></slot>
     </scroll-view>
 

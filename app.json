@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/my-prize/my-prize",
-    "pages/web-view/web-view"
+    "pages/web-view/web-view",
+    "pages/test/test"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffff00",
@@ -21,6 +22,10 @@
       {
         "pagePath": "pages/my-prize/my-prize",
         "text": "我的奖品"
+      },
+      {
+        "pagePath": "pages/test/test",
+        "text": "测试页面"
       }
     ]
   },

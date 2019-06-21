@@ -8,7 +8,7 @@
     <view class="header"></view>
     <view class="invite">
       <text>黄先生</text>
-      <button>邀请记录</button>
+      <button data-type="invite" bindtap="showDialog">邀请记录</button>
     </view>
     <view class="count">
       <text>开礼盒总次数：10次</text>
@@ -36,3 +36,6 @@
 
 <!-- 投诉 dialog -->
 <complain-dialog data-type="complain" wx:if="{{complainDialog}}" bindclose="close"></complain-dialog>
+
+<!-- 邀请记录 dialog -->
+<invite-dialog data-type="invite" wx:if="{{inviteDialog}}" bindclose="close"></invite-dialog>

@@ -186,6 +186,144 @@ const complainList = [{
     select: false
   }
 ];
+const initeList = [{
+    id: 0,
+    nikeName: '张三',
+    createTime: '2019-06-09 15:32:54',
+    count: 1
+  },
+  {
+    id: 1,
+    nikeName: '李四',
+    createTime: '2019-06-12 15:32:54',
+    count: 1
+  },
+  {
+    id: 2,
+    nikeName: '王五',
+    createTime: '2019-06-12 15:32:54',
+    count: 1
+  },
+  {
+    id: 3,
+    nikeName: '赵六',
+    createTime: '2019-06-14 15:32:54',
+    count: 1
+  },
+  {
+    id: 3,
+    nikeName: '赵六',
+    createTime: '2019-06-14 15:32:54',
+    count: 1
+  },
+  {
+    id: 3,
+    nikeName: '赵六',
+    createTime: '2019-06-14 15:32:54',
+    count: 1
+  }, {
+    id: 3,
+    nikeName: '赵六',
+    createTime: '2019-06-14 15:32:54',
+    count: 1
+  },
+  {
+    id: 3,
+    nikeName: '赵六',
+    createTime: '2019-06-14 15:32:54',
+    count: 1
+  },
+  {
+    id: 3,
+    nikeName: '赵六',
+    createTime: '2019-06-14 15:32:54',
+    count: 1
+  },
+  {
+    id: 3,
+    nikeName: '赵六',
+    createTime: '2019-06-14 15:32:54',
+    count: 1
+  },
+  {
+    id: 3,
+    nikeName: '赵六',
+    createTime: '2019-06-14 15:32:54',
+    count: 1
+  },
+  {
+    id: 3,
+    nikeName: '赵六',
+    createTime: '2019-06-14 15:32:54',
+    count: 1
+  },
+  {
+    id: 3,
+    nikeName: '赵六',
+    createTime: '2019-06-14 15:32:54',
+    count: 1
+  },
+  {
+    id: 3,
+    nikeName: '赵六',
+    createTime: '2019-06-14 15:32:54',
+    count: 1
+  },
+  {
+    id: 3,
+    nikeName: '赵六',
+    createTime: '2019-06-14 15:32:54',
+    count: 1
+  },
+  {
+    id: 3,
+    nikeName: '赵六',
+    createTime: '2019-06-14 15:32:54',
+    count: 1
+  },
+  {
+    id: 3,
+    nikeName: '赵六',
+    createTime: '2019-06-14 15:32:54',
+    count: 1
+  },
+  {
+    id: 3,
+    nikeName: '赵六',
+    createTime: '2019-06-14 15:32:54',
+    count: 1
+  },
+  {
+    id: 3,
+    nikeName: '赵六',
+    createTime: '2019-06-14 15:32:54',
+    count: 1
+  },
+  {
+    id: 3,
+    nikeName: '赵六',
+    createTime: '2019-06-14 15:32:54',
+    count: 1
+  },
+  {
+    id: 3,
+    nikeName: '赵六',
+    createTime: '2019-06-14 15:32:54',
+    count: 1
+  },
+  {
+    id: 3,
+    nikeName: '赵六',
+    createTime: '2019-06-14 15:32:54',
+    count: 1
+  },
+  {
+    id: 3,
+    nikeName: '赵六',
+    createTime: '2019-06-14 15:32:54',
+    count: 1
+  }
+];
 
 export default {
   prizeList,
@@ -193,5 +331,6 @@ export default {
   swiperList,
   recodeList,
   myPrizeList,
-  complainList
+  complainList,
+  initeList
 }
