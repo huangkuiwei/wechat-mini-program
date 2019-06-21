@@ -1,5 +1,4 @@
-const prizeList = [
-  {
+const prizeList = [{
     id: 0,
     image: `http://192.168.2.102:3000/public/images/prize-bg01.png`,
     text: '大气'
@@ -45,8 +44,7 @@ const prizeList = [
     text: '可爱'
   }
 ];
-const serviceList = [
-  {
+const serviceList = [{
     img: `http://192.168.2.102:3000/public/images/list/06.png`,
     remark: '1、“智能组网”是中国电信为WiFi组网需求宽带用户提供的“WiFi质量提升”服务，包括专业级的WiFi环境评测、组网设计、终端销售、调测部署服务，达到WiFi覆盖更优、上网更稳定更快的目的。\n2、智能组网包括249元千兆双频路由器一台以及50元智能组网WIFI检测及设计服务一次。\n3、智能组网服务，百兆网络，辐射较低，双频稳定，全家全连接，信号全满格！'
   },
@@ -75,8 +73,7 @@ const serviceList = [
     remark: '学堂青少版，属于青少年的专属课程节目，师大附中＋黄冈课堂等高质量教学内容，等你探索！'
   },
 ];
-const swiperList = [
-  {
+const swiperList = [{
     src: `http://192.168.2.102:3000/public/images/ad6.jpg`,
     link: 'https://mp.weixin.qq.com/s?__biz=Mzg3MTAxNDk4NA==&mid=2247483823&idx=1&sn=5e345d7f1171d8f615940aec02ff50d6&chksm=ce85b688f9f23f9ec954680a9c0eea222afe1c178f057c69b423ec41229625e91f4697ff2d79&bizpsid=0&scene=126&ascene=3&devicetype=android-26&version=2700043b&nettype=ctnet&abtest_cookie=BQABAAoACwASABMAFQAHACOXHgBWmR4AyZkeANyZHgDxmR4AA5oeAAyaHgAAAA%3D%3D&lang=zh_CN&pass_ticket=gHEDAYWitt2mzMj0ZJejmYeY0u5adhyR1Ej1ExjZ4uVCOhvWT7yc%2BP3Ik2A5Ca20&wx_header=1'
   },
@@ -100,14 +97,24 @@ const swiperList = [
     link: 'https://www.baidu.com'
   }
 ];
-const recodeList = [
-  {phn: '073****86756', prizeName: '万影汇影城90元团体券'},
-  {phn: '156****67493', prizeName: '玛莎拉蒂5元代金券'},
-  {phn: '188****86467', prizeName: '0.01元现金红包'},
-  {phn: '152****09362', prizeName: '马尔代夫全家自费自驾游'}
-];
-const myPrizeList = [
+const recodeList = [{
+    phn: '073****86756',
+    prizeName: '万影汇影城90元团体券'
+  },
   {
+    phn: '156****67493',
+    prizeName: '玛莎拉蒂5元代金券'
+  },
+  {
+    phn: '188****86467',
+    prizeName: '0.01元现金红包'
+  },
+  {
+    phn: '152****09362',
+    prizeName: '马尔代夫全家自费自驾游'
+  }
+];
+const myPrizeList = [{
     prizeId: 0,
     prizeType: '红包',
     prizeName: '18.88元红包'
@@ -143,8 +150,7 @@ const myPrizeList = [
     prizeName: '3元话费'
   }
 ];
-const complainList = [
-  {
+const complainList = [{
     id: 0,
     reason: '欺诈',
     select: false

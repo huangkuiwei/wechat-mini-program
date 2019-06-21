@@ -2,13 +2,13 @@ import myData from '../../data/index.js'
 
 Page({
   data: {
-    prizeList: myData.prizeList,          // 奖品列表
-    serviceList: myData.serviceList,      // 业务列表
-    recodeList: myData.recodeList,        // 中奖记录列表
-    swiperList: myData.swiperList,        // 轮播图
-    currentService: {},                   // 当前业务
-    prize: {},                            // 抽奖中的奖品
-    menu: 1,                              // 菜单
+    prizeList: myData.prizeList, // 奖品列表
+    serviceList: myData.serviceList, // 业务列表
+    recodeList: myData.recodeList, // 中奖记录列表
+    swiperList: myData.swiperList, // 轮播图
+    currentService: {}, // 当前业务
+    prize: {}, // 抽奖中的奖品
+    menu: 1, // 菜单
     ruleDialog: false,
     complainDialog: false,
     serviceDialog: false,
