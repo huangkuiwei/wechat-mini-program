@@ -18,7 +18,7 @@
   position: absolute;
   width: 75%;
   padding: 0 60rpx;
-  max-height: 75%;
+  max-height: 80%;
   display: flex;
   flex-direction: column;
   background: #802cc4;
@@ -52,13 +52,15 @@
   color: #ffde29;
   letter-spacing: 1px;
   text-shadow: 0 0 5px #ffde29;
-  background: url("http://192.168.2.102:3000/public/images/text-box.png") top/100% 100% no-repeat;
+  background: url("http://192.168.43.35:3000/public/images/text-box.png") top/100% 100% no-repeat;
 }
 
 .body {
-  flex: 1 1 auto;
   margin: 20rpx 0;
-  overflow: auto;
+  /* flex: 1 0 auto; */
+  /* overflow: auto; */
+  /* 这里必须要设置一个固定的高度，否则 scroll-view 上的事件不生效 *//* max-height 设置百分比无效 */
+  max-height: 55vh;
 }
 
 .footer {

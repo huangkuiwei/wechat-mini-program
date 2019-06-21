@@ -34,11 +34,11 @@ Page({
       let currentImage = `prizeList[${item.id}].image`;
       if (item.id === id) {
         this.setData({
-          [currentImage]: `http://192.168.2.102:3000/public/images/prize-bg02.png`
+          [currentImage]: `http://192.168.43.35:3000/public/images/prize-bg02.png`
         })
       } else {
         this.setData({
-          [currentImage]: `http://192.168.2.102:3000/public/images/prize-bg01.png`
+          [currentImage]: `http://192.168.43.35:3000/public/images/prize-bg01.png`
         })
       }
     })
@@ -61,7 +61,7 @@ Page({
   // 开启礼盒动作
   openPrize() {
     let isSelect = this.data.prizeList.some(item => {
-      return item.image === `http://192.168.2.102:3000/public/images/prize-bg02.png`
+      return item.image === `http://192.168.43.35:3000/public/images/prize-bg02.png`
     });
     if (!isSelect) {
       wx.showToast({

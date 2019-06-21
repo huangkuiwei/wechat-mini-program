@@ -1,7 +1,5 @@
 <dialog cancelable bindclose="close">
-  <view slot="header">
-    业务说明
-  </view>
+  <view slot="header">业务说明</view>
 
   <view class="remark">{{currentService.remark}}</view>
 </dialog>

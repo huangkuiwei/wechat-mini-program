@@ -1,0 +1,13 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 34rpx;
+  margin-bottom: 15rpx;
+}
+
+.recode {
+  display: flex;
+  justify-content: space-around;
+  font-size: 30rpx;
+  margin-bottom: 10rpx;
+}
