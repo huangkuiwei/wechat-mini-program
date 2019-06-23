@@ -22,9 +22,9 @@
 		}
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.7.0",
+	"libVersion": "2.7.2",
 	"appid": "wxfb824616f7199c09",
-	"projectname": "miniprogram-test-1",
+	"projectname": "wechat-mini-program",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

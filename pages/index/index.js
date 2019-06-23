@@ -15,10 +15,28 @@ Page({
     getPrizeDialog: false
   },
   // onLoad
-  onLoad() {
+  onLoad(options) {
     // TODO
-    wx.switchTab({
-      url: '/pages/my-prize/my-prize'
+    // wx.switchTab({
+      // url: '/pages/test/test'
+    // })
+
+    // 上次进入小程序弹出活动规则
+    let key = 'welcom-to-wechat';
+    if (!wx.getStorageSync(key)) {
+      wx.setStorageSync(key, true);
+      this.setData({
+        ruleDialog: true
+      })
+    };
+  },
+  onHide() {
+    // 离开当前页面后将弹窗都关闭
+    this.setData({
+      // ruleDialog: false,
+      // complainDialog: false,
+      // serviceDialog: false,
+      // getPrizeDialog: false
     })
   },
   // 分享转发事件

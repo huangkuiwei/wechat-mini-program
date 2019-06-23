@@ -7,6 +7,12 @@ Page({
     complainDialog: false,
     inviteDialog: false
   },
+  onLoad() {
+    wx.setNavigationBarTitle({
+      title: 'hello world',
+    });
+    console.log(getCurrentPages())
+  },
   // 弹窗
   showDialog(e) {
     if (e.target.dataset.type === 'rule') {
