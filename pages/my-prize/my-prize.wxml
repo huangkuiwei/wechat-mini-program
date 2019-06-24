@@ -32,10 +32,10 @@
 </view>
 
 <!-- 活动规则 dialog -->
-<rule-dialog data-type="rule" wx:if="{{ruleDialog}}" bindclose="close"></rule-dialog>
+<rule-dialog wx:if="{{ruleDialog}}"></rule-dialog>
 
 <!-- 投诉 dialog -->
-<complain-dialog data-type="complain" wx:if="{{complainDialog}}" bindclose="close"></complain-dialog>
+<complain-dialog wx:if="{{complainDialog}}"></complain-dialog>
 
 <!-- 邀请记录 dialog -->
-<invite-dialog data-type="invite" wx:if="{{inviteDialog}}" bindclose="close"></invite-dialog>
+<invite-dialog wx:if="{{inviteDialog}}"></invite-dialog>

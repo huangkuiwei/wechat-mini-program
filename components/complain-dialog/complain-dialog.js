@@ -25,10 +25,6 @@ Component({
         }
       })
     },
-    // 关闭弹窗
-    close() {
-      this.triggerEvent('close')
-    },
     // 监控 otherReason 值的变换，保持用户输入的最新值
     otherReasonInput(e) {
       this.setData({
@@ -65,7 +61,7 @@ Component({
           icon: 'none'
         })
       }
-      this.triggerEvent('close')
+      getCurrentPages().reverse()[0].close()
     }
   }
 });

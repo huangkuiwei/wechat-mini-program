@@ -1,10 +1,13 @@
-.progress {
-  width: 500rpx;
-  height: 3px;
-  border: 1px solid #ccc;
+.box {
+  display: flex;
 }
 
-.color {
+.item {
+  height: 100rpx;
+  width: 100rpx;
   background: #ccc;
-  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

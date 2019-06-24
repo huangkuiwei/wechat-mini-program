@@ -1,11 +1,9 @@
-<dialog cancelable="{{true}}" bindclose="close">
+<dialog>
   <view slot="header">
     活动规则
   </view>
 
-  <view class="rule">
-    1. 活动时间：2018年12月7日-12月15日
-  </view>
+  <view class="rule">1. 活动时间：2018年12月7日-12月15日</view>
   <view class="rule">2. 活动对象：湖南电信用户</view>
   <view class="rule">3. 用户初次参与活动有1次抽现金红包机会，每成功邀请1位好友首次关注“中国电信湖南客服”即可获得1次抽取现金红包机会。</view>
   <view class="rule">4. 现金红包金额可累加，达到1元即可提现到微信账户中，如未关注绑定“中国电信湖南客服”红包将无法提现。</view>

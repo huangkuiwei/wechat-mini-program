@@ -13,7 +13,7 @@ Component({
   },
   methods: {
     close() {
-      this.triggerEvent('close')
+      getCurrentPages().reverse()[0].close()
     }
   }
 });

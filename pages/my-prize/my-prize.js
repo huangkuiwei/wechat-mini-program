@@ -30,19 +30,11 @@ Page({
     }
   },
   // 关闭弹窗
-  close(e) {
-    if (e.target.dataset.type === 'complain') {
-      this.setData({
-        complainDialog: false
-      })
-    } else if (e.target.dataset.type === 'rule') {
-      this.setData({
-        ruleDialog: false
-      })
-    } else if (e.target.dataset.type === 'invite') {
-      this.setData({
-        inviteDialog: false
-      })
-    }
+  close() {
+    this.setData({
+      ruleDialog: false,
+      complainDialog: false,
+      inviteDialog: false
+    })
   }
 });

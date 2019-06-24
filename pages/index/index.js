@@ -16,19 +16,20 @@ Page({
   },
   // onLoad
   onLoad(options) {
+    console.log(wx.env);
     // TODO
-    // wx.switchTab({
-      // url: '/pages/test/test'
-    // })
+    wx.switchTab({
+      url: '/pages/test/test'
+    })
 
-    // 上次进入小程序弹出活动规则
+    // 首次进入小程序弹出活动规则
     let key = 'welcom-to-wechat';
     if (!wx.getStorageSync(key)) {
       wx.setStorageSync(key, true);
       this.setData({
         ruleDialog: true
       })
-    };
+    }
   },
   onHide() {
     // 离开当前页面后将弹窗都关闭
@@ -52,11 +53,11 @@ Page({
       let currentImage = `prizeList[${item.id}].image`;
       if (item.id === id) {
         this.setData({
-          [currentImage]: `http://192.168.43.35:3000/public/images/prize-bg02.png`
+          [currentImage]: `http://192.168.2.102:3000/public/images/prize-bg02.png`
         })
       } else {
         this.setData({
-          [currentImage]: `http://192.168.43.35:3000/public/images/prize-bg01.png`
+          [currentImage]: `http://192.168.2.102:3000/public/images/prize-bg01.png`
         })
       }
     })
@@ -79,7 +80,7 @@ Page({
   // 开启礼盒动作
   openPrize() {
     let isSelect = this.data.prizeList.some(item => {
-      return item.image === `http://192.168.43.35:3000/public/images/prize-bg02.png`
+      return item.image === `http://192.168.2.102:3000/public/images/prize-bg02.png`
     });
     if (!isSelect) {
       wx.showToast({
@@ -117,24 +118,13 @@ Page({
     }
   },
   // 关闭弹窗
-  close(e) {
-    if (e.target.dataset.type === 'complain') {
-      this.setData({
-        complainDialog: false
-      })
-    } else if (e.target.dataset.type === 'rule') {
-      this.setData({
-        ruleDialog: false
-      })
-    } else if (e.target.dataset.type === 'service') {
-      this.setData({
-        serviceDialog: false
-      })
-    } else if (e.target.dataset.type === 'getPrize') {
-      this.setData({
-        getPrizeDialog: false
-      })
-    }
+  close() {
+    this.setData({
+      complainDialog: false,
+      ruleDialog: false,
+      serviceDialog: false,
+      getPrizeDialog: false
+    })
   },
   // 轮播图跳转
   jump(e) {

@@ -1,4 +1,12 @@
-<dialog bindclose="close" bindscrolltolower="scrolltolower">
+<wxs module="tools">
+  function getCreateTime(createTime) {
+    return createTime.slice(0, 10)
+  }
+
+  module.exports.getCreateTime = getCreateTime
+</wxs>
+
+<dialog bindscrolltolower="scrolltolower">
   <view slot="header">邀请记录</view>
 
   <view class="item">
@@ -9,7 +17,7 @@
   <block wx:for="{{inviteList}}" wx:key="{{index}}">
     <view class="recode">
       <text>{{item.nikeName}}</text>
-      <text>{{item.createTime}}</text>
+      <text>{{tools.getCreateTime(item.createTime)}}</text>
       <text>{{item.count}}次</text>
     </view>
   </block>

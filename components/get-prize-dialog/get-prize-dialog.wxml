@@ -6,7 +6,7 @@
   module.exports.getTip = getTip
 </wxs>
 
-<dialog bindclose="close">
+<dialog>
   <view class="body">
     <view class="tip">{{myFun.getTip(tips)}}</view>
     <view class="">恭喜你获得</view>

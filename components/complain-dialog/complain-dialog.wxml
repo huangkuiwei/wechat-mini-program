@@ -1,4 +1,4 @@
-<dialog bindclose="close">
+<dialog>
   <view class="reason">请选择投诉原因</view>
   <view data-id="{{item.id}}" class="list {{item.select ? 'active' : ''}}" bindtap="selectReason" wx:for="{{complainList}}" wx:key="{{index}}">
     <text>{{item.reason}}</text>

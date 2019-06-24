@@ -1,9 +1,9 @@
 App({
-  onLaunch(options) {
-    console.log(options)
+  onLaunch() {
+
   },
-  onShow(options) {
-    console.log(options)
+  onShow() {
+
   },
   globalData: {}
 });

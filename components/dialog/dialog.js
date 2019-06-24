@@ -11,7 +11,8 @@ Component({
   methods: {
     closeLayer() {
       if (this.data.cancelable) {
-        this.triggerEvent('close')
+        // 直接获取到当前页面的实例，调用关闭方法
+        getCurrentPages().reverse()[0].close()
       }
     },
     scrolltolower() {

@@ -2,12 +2,12 @@
 
 <view class="index">
   <!-- 顶部 -->
-  <image class="top-bg" mode="widthFix" src="http://192.168.43.35:3000/public/images/top-bg.png"></image>
+  <image class="top-bg" mode="widthFix" src="http://192.168.2.102:3000/public/images/top-bg.png"></image>
   <template is="complain-rule"></template>
 
   <!-- 抽奖区域 -->
   <view class="draw">
-    <image class="box-bg" mode="widthFix" src="http://192.168.43.35:3000/public/images/box-bg.png"></image>
+    <image class="box-bg" mode="widthFix" src="http://192.168.2.102:3000/public/images/box-bg.png"></image>
     <swiper autoplay interval="{{3000}}" circular vertical wx:if="{{recodeList.length > 0}}" class="drwan-pirze">
       <swiper-item wx:for="{{recodeList}}" wx:key="{{index}}">
         恭喜{{item.phn}}获得{{item.prizeName}}
@@ -17,11 +17,11 @@
     <view class="prize">
       <view wx:for="{{prizeList}}" wx:key="item.id">
         <image bindtap="getPrize" data-id="{{item.id}}" mode="widthFix" src="{{item.image}}"></image>
-        <text class="{{item.image === ('http://192.168.43.35:3000/public/images/prize-bg02.png') ? 'active' : ''}}">{{item.text}}</text>
+        <text class="{{item.image === ('http://192.168.2.102:3000/public/images/prize-bg02.png') ? 'active' : ''}}">{{item.text}}</text>
       </view>
     </view>
     <view class="btn-bg">
-      <image mode="widthFix" src="http://192.168.43.35:3000/public/images/btn-bg.png"></image>
+      <image mode="widthFix" src="http://192.168.2.102:3000/public/images/btn-bg.png"></image>
       <text class="open" bindtap="openPrize">开启礼盒</text>
     </view>
   </view>
@@ -35,16 +35,16 @@
       <text data-menu="{{3}}" class="{{menu === 3 ? 'active' : ''}}" bindtap="changeItem">特惠福利享不停</text>
     </view>
     <view class="item1" wx:if="{{menu === 1}}">
-      <image src="http://192.168.43.35:3000/public/images/left-prize01.png" mode="widthFix"></image>
-      <image src="http://192.168.43.35:3000/public/images/left-prize02.png" mode="widthFix"></image>
-      <image src="http://192.168.43.35:3000/public/images/left-prize03.png" mode="widthFix"></image>
-      <image src="http://192.168.43.35:3000/public/images/left-prize04.png" mode="widthFix"></image>
+      <image src="http://192.168.2.102:3000/public/images/left-prize01.png" mode="widthFix"></image>
+      <image src="http://192.168.2.102:3000/public/images/left-prize02.png" mode="widthFix"></image>
+      <image src="http://192.168.2.102:3000/public/images/left-prize03.png" mode="widthFix"></image>
+      <image src="http://192.168.2.102:3000/public/images/left-prize04.png" mode="widthFix"></image>
     </view>
     <view class="item2" wx:if="{{menu === 2}}">
       <image data-item="{{item}}" data-type="service" bindtap="showDialog" wx:for="{{serviceList}}" wx:key="{{index}}" src="{{item.img}}" mode="widthFix"></image>
     </view>
     <view class="item3" wx:if="{{menu === 3}}">
-      <image src="http://192.168.43.35:3000/public/images/right-prize.png" mode="widthFix"></image>
+      <image src="http://192.168.2.102:3000/public/images/right-prize.png" mode="widthFix"></image>
     </view>
   </view>
 
@@ -57,13 +57,13 @@
 </view>
 
 <!-- 活动规则 dialog -->
-<rule-dialog data-type="rule" wx:if="{{ruleDialog}}" bindclose="close"></rule-dialog>
+<rule-dialog id="rule-dialog" wx:if="{{ruleDialog}}"></rule-dialog>
 
 <!-- 投诉 dialog -->
-<complain-dialog data-type="complain" wx:if="{{complainDialog}}" bindclose="close"></complain-dialog>
+<complain-dialog wx:if="{{complainDialog}}"></complain-dialog>
 
 <!-- 业务说明 dialog -->
-<service-dialog data-type="service" wx:if="{{serviceDialog}}" current-service="{{currentService}}" bindclose="close"></service-dialog>
+<service-dialog wx:if="{{serviceDialog}}" current-service="{{currentService}}"></service-dialog>
 
 <!-- 抽奖弹窗 -->
-<get-prize-dialog data-type="getPrize" wx:if="{{getPrizeDialog}}" prize="{{prize}}" bindclose="close"></get-prize-dialog>
+<get-prize-dialog wx:if="{{getPrizeDialog}}" prize="{{prize}}"></get-prize-dialog>
