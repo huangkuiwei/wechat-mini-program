@@ -1,6 +1,6 @@
 <template name="complain-rule">
   <view class="complain-rule">
-    <image class="telecom" mode="widthFix" src="http://192.168.2.102:3000/public/images/telecom.png"></image>
+    <image class="telecom" mode="widthFix" src="http://192.168.43.35:3000/public/images/telecom.png"></image>
     <view class="options">
       <text data-type="complain" bindtap="showDialog">投诉</text> |
       <text data-type="rule" bindtap="showDialog">活动规则</text>
